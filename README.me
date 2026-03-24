@@ -1,0 +1,190 @@
+📚 Literature Summarizer — AI-Powered PDF Analysis App
+
+A production-ready, local AI application that enables users to upload academic or technical PDF documents, generate concise summaries, and ask semantic questions over the document content.
+
+Built with LangChain, FAISS, Ollama, and Streamlit, this project demonstrates end-to-end LLM application development — from document ingestion and embeddings to retrieval-augmented generation (RAG) and UI deployment.
+
+---
+
+🚀 Project Highlights
+
+- End-to-end RAG (Retrieval-Augmented Generation) pipeline
+- Fully local LLM inference (no external LLM APIs)
+- Scalable document chunking and vector indexing
+- Real-time semantic question answering
+- Clean, reproducible Python environment design
+- Production-oriented dependency and model management
+
+---
+
+🧠 Architecture Overview
+
+```
+
+PDF
+└─▶ Text Extraction
+└─▶ Chunking
+└─▶ Embeddings
+└─▶ FAISS Vector Index
+│
+▼
+Ollama LLM
+│
+▼
+Summary Generation & QA Responses
+
+````
+
+-> Key Design Decisions
+
+- FAISS for fast and efficient vector similarity search
+- Ollama embeddings for fully local semantic indexing
+- LangChain chains for modular orchestration
+- Streamlit for rapid, interactive UI development
+- Virtual environments + pinned dependencies for reproducibility
+
+---
+
+✨ Features
+
+- 📄 Upload and parse PDF documents
+- ✂️ Chunk-based processing for large files
+- 🧠 Vector embeddings using local models
+- 🔍 Semantic search with FAISS
+- 📝 Automatic document summarization
+- ❓ Context-aware question answering
+- 🌍 Multilingual summary translation (AWS Translate)
+- 💾 Downloadable summaries
+
+---
+
+🧰 Tech Stack
+
+| Category | Tools |
+|--------|------|
+| Language | Python 3.11 |
+| LLM Orchestration | LangChain (0.1.x) |
+| Vector Database | FAISS |
+| Local LLMs | Ollama |
+| UI Framework | Streamlit |
+| PDF Parsing | pdfplumber |
+| Translation | AWS Translate (boto3) |
+
+---
+
+📦 Requirements
+
+-> System Requirements
+- Python 3.11 (required)
+- Ollama installed and running
+
+-> Required Ollama Models
+
+```bash
+ollama pull nomic-embed-text
+ollama pull llama3
+````
+
+> ℹ️ Ollama models are intentionally excluded from version control.
+
+---
+
+ ⚙️ Setup & Installation
+
+```bash
+git clone https://github.com/ruthesh-git/literature-summarizer.git
+cd literature-summarizer
+
+python -m venv .venv
+```
+
+-> Activate the virtual environment
+
+Windows
+
+```powershell
+.venv\Scripts\activate
+```
+
+macOS / Linux
+
+```bash
+source .venv/bin/activate
+```
+
+-> Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+▶️ Run the Application
+
+```bash
+streamlit run litSummerisator.py
+```
+
+The app will open automatically in your browser.
+
+---
+
+🧪 Usage
+
+1. Upload a PDF document
+2. Generate a concise summary
+3. Ask semantic follow-up questions
+4. Translate summaries if required
+5. Download results as a text file
+
+---
+
+🔐 Engineering Practices
+
+* Clean `.gitignore` (no models, venvs, or secrets committed)
+* Pinned dependency versions for stability
+* Local inference for privacy and cost control
+* Modular and readable code structure
+* Platform-agnostic setup
+
+---
+
+🧠 What This Project Demonstrates
+
+* Practical application of LLMs in real-world systems
+* Building RAG pipelines from scratch
+* Efficient handling of large documents
+* Local AI deployment strategies
+* Debugging complex Python environments
+* Solving Windows-specific ML tooling challenges
+
+---
+
+🔮 Future Enhancements
+
+* Streaming token responses
+* Conversational memory improvements
+* Dockerized deployment
+* Migration to modern LangChain LCEL
+* Performance optimization for large PDFs
+
+---
+
+📜 License
+
+This project is intended for educational and portfolio purposes.
+Feel free to fork, modify, and extend.
+
+---
+
+👤 Author
+
+-Ruthesh Medaboina
+Java Full-Stack Developer | AI / ML Engineer | Python Developer | Cloud Engineer
+
+📧 Email: [ruth.dev.v1@gmail.com](mailto:ruth.dev.v1@gmail.com)
+🔗 GitHub: [https://github.com/ruthesh-git](https://github.com/ruthesh-git)
+🔗 LinkedIn: [https://www.linkedin.com/in/ruthesh-medaboina-677b822a7/](https://www.linkedin.com/in/ruthesh-medaboina-677b822a7/)
+
+```
